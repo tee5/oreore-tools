@@ -5,7 +5,7 @@
     const cwd = $.NSURL.alloc.initWithString(frontWindow.target().url()).fileSystemRepresentation;
     const app = Application.currentApplication()
     app.includeStandardAdditions = true
-    cmd = `touch Untitled"`;
+    cmd = `touch ${cwd}/Untitled`;
     result = app.doShellScript(cmd, {
         administratorPrivileges: false,
         withPrompt: '',
